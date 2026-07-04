@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "agent_id": {
+      "type": "string",
+      "description": "Reference to Agent entity ID"
+    },
+    "company_id": {
+      "type": "string",
+      "description": "Reference to Company entity ID"
+    },
+    "title": {
+      "type": "string",
+      "description": "Task title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed task description"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "todo",
+        "doing",
+        "done",
+        "blocked"
+      ],
+      "description": "Task status for Kanban board"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Task deadline"
+    },
+    "result": {
+      "type": "string",
+      "description": "Output/result of completed task"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "description": "Task priority level",
+      "default": "medium"
+    },
+    "assigned_by": {
+      "type": "string",
+      "description": "Agent role that assigned this task"
+    }
+  },
+  "required": [],
+  "name": "Task"
+}
