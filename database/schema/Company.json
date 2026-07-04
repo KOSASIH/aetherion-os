@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "The original one-prompt that created the company"
+    },
+    "treasury_wallet": {
+      "type": "string",
+      "description": "Solana wallet public key for treasury"
+    },
+    "treasury_secret": {
+      "type": "string",
+      "description": "Encrypted secret key for treasury wallet"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "paused",
+        "forming",
+        "dissolved"
+      ],
+      "description": "Company operational status"
+    },
+    "created_by_wallet": {
+      "type": "string",
+      "description": "Wallet address of the company creator"
+    },
+    "revenue": {
+      "type": "number",
+      "description": "Total monthly revenue in SOL",
+      "default": 0
+    },
+    "health_score": {
+      "type": "number",
+      "description": "Health score 0-100",
+      "default": 50
+    },
+    "logo_url": {
+      "type": "string",
+      "description": "Company logo URL"
+    },
+    "description": {
+      "type": "string",
+      "description": "AI-generated company description"
+    }
+  },
+  "required": [],
+  "name": "Company"
+}
