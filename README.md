@@ -80,4 +80,4 @@ aetherion-os/
 - `ELEVENLABS_API_KEY` - Voice synthesis
 
 ---
-Built on [Base44](https://base44.com) · Powered by Solana + GPT-4o
+Built By [KOSASIH](https://github.com/KOSASIH)· Powered by Solana + GPT-4o
