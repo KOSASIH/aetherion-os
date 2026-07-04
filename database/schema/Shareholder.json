@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "properties": {
+    "company_id": {
+      "type": "string",
+      "description": "Reference to Company entity ID"
+    },
+    "wallet": {
+      "type": "string",
+      "description": "Shareholder Solana wallet address"
+    },
+    "shares": {
+      "type": "number",
+      "description": "Number of shares held",
+      "default": 0
+    },
+    "shares_percentage": {
+      "type": "number",
+      "description": "Percentage of total shares",
+      "default": 0
+    },
+    "claimed_yield": {
+      "type": "number",
+      "description": "Total yield claimed in SOL",
+      "default": 0
+    },
+    "last_yield_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last yield distribution date"
+    }
+  },
+  "required": [],
+  "name": "Shareholder"
+}
