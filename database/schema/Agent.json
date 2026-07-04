@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "properties": {
+    "company_id": {
+      "type": "string",
+      "description": "Reference to Company entity ID"
+    },
+    "name": {
+      "type": "string",
+      "description": "Agent display name e.g. AETHOS, FORGE"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "CEO",
+        "CPO",
+        "CMO",
+        "CFO",
+        "COO",
+        "CLO",
+        "CTO"
+      ],
+      "description": "Agent role within the company"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "paused",
+        "error",
+        "idle"
+      ],
+      "description": "Agent operational status"
+    },
+    "kpi": {
+      "type": "string",
+      "description": "Current KPI metric for the agent"
+    },
+    "kpi_value": {
+      "type": "number",
+      "description": "Numeric KPI value",
+      "default": 0
+    },
+    "last_action": {
+      "type": "string",
+      "description": "Description of last action taken"
+    },
+    "last_action_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of last action"
+    },
+    "system_prompt": {
+      "type": "string",
+      "description": "GPT-4o system prompt for this agent"
+    }
+  },
+  "required": [],
+  "name": "Agent"
+}
