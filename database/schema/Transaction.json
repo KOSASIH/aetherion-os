@@ -1,0 +1,51 @@
+{
+  "type": "object",
+  "properties": {
+    "company_id": {
+      "type": "string",
+      "description": "Reference to Company entity ID"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "income",
+        "expense",
+        "yield_distribution",
+        "investment"
+      ],
+      "description": "Transaction type"
+    },
+    "amount_sol": {
+      "type": "number",
+      "description": "Amount in SOL"
+    },
+    "signature": {
+      "type": "string",
+      "description": "Solana on-chain transaction signature"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Transaction timestamp"
+    },
+    "from_wallet": {
+      "type": "string",
+      "description": "Sender wallet address"
+    },
+    "to_wallet": {
+      "type": "string",
+      "description": "Recipient wallet address"
+    },
+    "description": {
+      "type": "string",
+      "description": "Transaction description/memo"
+    },
+    "verified": {
+      "type": "boolean",
+      "description": "Whether signature verified on-chain",
+      "default": false
+    }
+  },
+  "required": [],
+  "name": "Transaction"
+}
